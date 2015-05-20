@@ -20,7 +20,7 @@ If you have a decorator, usage is as simple as calling
   def my_decorator(f):
       # ...
 
-  DecMixin = DecoratorMixin(my_decorator)
+  MyDecMixin = DecoratorMixin(my_decorator)
 
 ~~~~~~~~~~~~~~~~~~~
 Decorator Factories
