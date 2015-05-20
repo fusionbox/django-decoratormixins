@@ -8,8 +8,7 @@ install_requires = [
 ]
 
 packages = [
-    'decoratormixins',
-    'decoratormixins.views',
+    'decoratormixins'
 ]
 
 def read_file(filename):
