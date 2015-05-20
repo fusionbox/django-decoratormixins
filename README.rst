@@ -86,3 +86,50 @@ Composing Mixins
 It is possible to use multiple mixins for a single class, but **order
 matters**. The leftmost mixin in a class definition will be the
 outermost decorator.
+
+.. code:: python
+
+  from decoratormixins.auth import LoginRequiredMixin
+  from decoratormixins.http import RequireGetMixin
+
+  # TestView from above
+
+  class LoggedInGetRequestView(LoginRequiredMixin,
+                               RequireGetMixin,
+			       TestView):
+      pass
+
+---------------
+Included Mixins
+---------------
+
+Here is a list of all of the included mixins, and the modules in which they can be found.
+
+* ``decoratormixins.auth``
+
+  - ``LoginRequiredMixin``
+
+* ``decoratormixins.csrf``
+
+  - ``CsrfProtectMixin``
+  - ``EnsureCsrfCookieMixin``
+  - ``CsrfExemptMixin``
+
+* ``decoratormixins.http``
+
+  - ``ConditionalPageMixin``
+  - ``RequireGetMixin``
+  - ``RequirePostMixin``
+  - ``RequireSafeMixin``
+  - ``EtagMixin``
+  - ``LastModifiedMixin``
+
+* ``decoratormixins.cache``
+
+  - ``NeverCacheMixin``
+
+* ``decoratormixins.clickjacking``
+
+  - ``XFrameOptionsDenyMixin``
+  - ``XFrameOptionsDenySameoriginMixin``
+  - ``XFrameOptionsDenyExemptMixin``
