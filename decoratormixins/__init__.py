@@ -1,3 +1,5 @@
+__version__ = __import__('pkg_resources').get_distribution('django-decoratormixins').version
+
 def DecoratorMixin(decorator):
     """
     Converts a decorator written for a function view into a mixin for a

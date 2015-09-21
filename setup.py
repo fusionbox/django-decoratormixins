@@ -1,7 +1,7 @@
 import os
 from setuptools import setup
 
-version = '0.1.0'
+version = '1.0.0'
 
 install_requires = [
     'Django>=1.5'
@@ -16,7 +16,7 @@ def read_file(filename):
         return f.read()
 
 
-setup(name='django-generatormixins',
+setup(name='django-decoratormixins',
       version=version,
       author='Fusinobox, Inc.',
       author_email='programmers@fusionbox.com',
@@ -25,7 +25,7 @@ setup(name='django-generatormixins',
       description='A collection of decorator mixins for Django views.',
       long_description=read_file('README.rst'),
       classifiers=[
-          'Development Status :: 1 - Planning',
+          'Development Status :: 4 - Beta',
           'Framework :: Django',
           'Intended Audience :: Developers',
           'License :: OSI Approved :: BSD License',
