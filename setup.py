@@ -4,7 +4,7 @@ from setuptools import setup
 version = '1.0.1.dev0'
 
 install_requires = [
-    'Django>=1.5'
+    'Django>=2.2'
 ]
 
 packages = [
@@ -30,8 +30,10 @@ setup(name='django-decoratormixins',
           'Intended Audience :: Developers',
           'License :: OSI Approved :: BSD License',
           'Programming Language :: Python',
+          'Programming Language :: Python :: 3',
           'Topic :: Software Development :: Libraries',
       ],
+      python_requires='>=3.8',
       install_requires=install_requires,
       packages=packages,
       license='BSD',

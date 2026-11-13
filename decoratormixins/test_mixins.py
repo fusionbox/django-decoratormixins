@@ -14,7 +14,7 @@ def require_get_param(param):
         def _wrapped_view_func(request, *args, **kwargs):
             if request.GET.get(param, None) is not None:
                 response = view_func(request, *args, **kwargs)
-                response.content += param
+                response.content += param.encode()
                 return response
             else:
                 return HttpResponseNotFound("{} is not present.".format(param))
@@ -71,4 +71,4 @@ class TestDecoratorMixin(unittest.TestCase):
         view = TestViewBothMixin.as_view()
         response = view(request)
         self.assertEqual(200, response.status_code)
-        self.assertEqual("OKbarfoo", response.content)
+        self.assertEqual(b"OKbarfoo", response.content)
